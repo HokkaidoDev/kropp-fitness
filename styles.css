@@ -29,7 +29,7 @@
   --color-light-gray: #c4c4c4;
 
   --border-radius: 30px;
-  --border: 1px solid var(var(--color-light));
+  --border: 1px solid var(--color-light);
 
   --font-family-base: "Heebo", sans-serif;
   --font-family-accent: "Yantramanav", sans-serif;
@@ -44,5 +44,132 @@
 
 body {
   font-family: var(--font-family-base);
+  color: var(--color-light-gray);
+  line-height: 1.75;
   background-color: var(--color-dark);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: var(--color-light);
+}
+
+a:hover {
+  color: var(--color-light-gray);
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  height: 38px;
+  padding-inline: 26px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: var(--color-light);
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+.button:hover {
+  background-color: var(--color-light-gray);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.header-logo-image {
+}
+
+.header-menu {
+}
+
+.header-menu-list {
+  display: flex;
+  column-gap: 50px;
+}
+
+.header-menu-item {
+}
+
+.header-menu-link {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 7px;
+  height: 90px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+
+.header-menu-link.is-current::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+
+.header-actions {
+  display: flex;
+  column-gap: 40px;
+}
+
+.header-book-button {
+}
+
+.header-burger-button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 4px;
+  height: 40px;
+  width: 40px;
+  padding-left: 8px;
+  background-color: transparent;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.header-burger-button-line {
+  width: 6px;
+  height: 1px;
+  background-color: var(--color-light);
+  box-shadow: 16px 0 0 var(--color-light);
 }
