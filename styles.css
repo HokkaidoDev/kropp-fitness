@@ -106,6 +106,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   column-gap: 20px;
+  padding-inline: 32px;
 }
 
 .header-logo {
@@ -121,6 +122,7 @@ h6 {
 .header-menu-list {
   display: flex;
   column-gap: 50px;
+  flex-wrap: wrap;
 }
 
 .header-menu-item {
@@ -162,14 +164,60 @@ h6 {
   height: 40px;
   width: 40px;
   padding-left: 8px;
+  color: var(--color-light);
   background-color: transparent;
   border: var(--border);
   border-radius: var(--border-radius);
 }
 
+.header-burger-button:hover {
+  color: var(--color-light-gray);
+  border-color: currentColor;
+}
+
 .header-burger-button-line {
   width: 6px;
   height: 1px;
-  background-color: var(--color-light);
-  box-shadow: 16px 0 0 var(--color-light);
+  background-color: currentColor;
+  box-shadow: 16px 0 0 currentColor;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-top: 20px;
+    padding-inline: 15px;
+  }
+
+  .header-menu {
+    order: 1;
+    flex-basis: 100%;
+  }
+
+  .header-menu-link {
+    height: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    padding-inline: 18px;
+  }
+
+  .header {
+    padding-top: 10px;
+  }
+
+  .header-menu-list {
+    column-gap: 24px;
+  }
+
+  .header-menu-link {
+    height: 32px;
+  }
+
+  .header-actions {
+    column-gap: 15px;
+  }
 }
