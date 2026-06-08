@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Heebo";
-  src: url("Heebo-Bold.woff2") format("woff2");
+  src: url("./fonts/Heebo-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Yantramanav";
-  src: url("Yantramanav-Bold.woff2") format("woff2");
+  src: url("./fonts/Yantramanav-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -162,7 +162,7 @@ h6 {
 }
 
 .header-menu-link.is-current::after {
-  content: "";
+  content: '';
   width: 5px;
   aspect-ratio: 1;
   background-color: currentColor;
@@ -208,7 +208,7 @@ h6 {
 .banner {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   min-height: calc(100vh - var(--header-height));
   padding: 36px 70px;
   color: var(--color-light);
@@ -221,11 +221,11 @@ h6 {
 
 .banner-info {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   /* 30px / 1920px(layout-width) * 100 = 1.56vw */
   /* font-size: min(1.56vw, 30px); */
   /* For better adaptation clamp looks better*/
-  font-size: clamp(16px, 1.56px, 30px);
+  font-size: clamp(16px, 1.56vw, 30px);
   line-height: 1.27;
   font-weight: 700;
 }
@@ -341,4 +341,5 @@ h6 {
     margin-right: 10px;
   }
 }
+
 /* --------------- */
