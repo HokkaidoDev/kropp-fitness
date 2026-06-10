@@ -99,7 +99,7 @@ h6 {
 
 /* Components */
 .title-medium {
-  font-size: 40px;
+  font-size: clamp(20px, 2.08vw, 40px);
   line-height: 1.3;
   color: var(--color-light);
 }
@@ -389,12 +389,9 @@ h6 {
 
 .motivation-card-description:not(:last-child) {
   margin-bottom: 37px;
-}
+} 
 
 .motivation-card-button {
-}
-
-.transparent {
 }
 
 .motivation-card-image {
@@ -402,6 +399,12 @@ h6 {
 }
 
 /* ---------------- */
+
+@media (max-width: 1919px) {
+  .motivation-card-image {
+    margin-block: -20px;
+  }
+}
 
 @media (max-width: 1024px) {
   .header {
@@ -426,6 +429,15 @@ h6 {
 
   .banner {
     row-gap: 10px;
+  }
+
+  .motivation-card {
+    padding-block: 50px;
+  }
+
+  .motivation-card-image {
+    max-width: 30%;
+    margin-block: 0;
   }
 }
 
@@ -456,6 +468,24 @@ h6 {
 
   .banner-info::before {
     margin-right: 10px;
+  }
+
+  .motivation-card,
+  .motivation-item:nth-child(even) .motivation-card {
+    flex-direction: column-reverse;
+  }
+
+  .motivation-card {
+    padding-block: 30px;
+    row-gap: 30px;
+  }
+
+  .motivation-card-description:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .motivation-card-image {
+    min-width: 60%;
   }
 }
 
