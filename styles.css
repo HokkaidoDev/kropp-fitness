@@ -75,7 +75,7 @@ a:hover {
 }
 
 .container-wide {
-  min-width: 1920px;
+  max-width: 1920px;
   margin-inline: auto;
 }
 
@@ -580,7 +580,7 @@ h6 {
 
 .join-us-form-subtitle {
   font-size: 20px;
-  line-height: 1;
+  line-height: 1.65;
   text-transform: uppercase;
   text-align: center;
   color: var(--color-light);
@@ -626,7 +626,7 @@ h6 {
 }
 
 .location-description {
-  min-width: 490px;
+  max-width: 490px;
 }
 
 .location-description:not(:last-child) {
@@ -690,6 +690,11 @@ h6 {
 
   .join-us-title:not(:last-child) {
     margin-bottom: 80px;
+  }
+
+  .location {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -771,6 +776,14 @@ h6 {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
+  }
+
+  .location-body {
+    padding-block: 40px;
+  }
+
+  .location-description:not(:last-child) {
+    margin-bottom: 20`px;
   }
 }
 
